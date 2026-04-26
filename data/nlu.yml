@@ -1,0 +1,152 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey
+      - good morning
+      - good evening
+      - hello happy toys
+      - hello toy shop phinete box
+      - hi toy shop phinete box
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you
+      - thanks bye
+      - thank you
+      - okay bye
+      - no thanks
+
+  - intent: recommend_toy
+    examples: |
+      - suggest a toy
+      - recommend a toy
+      - show me toys
+      - show more toys
+      - show other toys
+      - what other toys are there
+      - what are other toys are there
+      - so what are other toys are there
+      - give me more options
+      - more options please
+      - show all toys
+      - i want remote control cars
+      - i like rc cars
+      - like some crazy rc cars
+      - show rc cars
+      - do you have remote cars
+      - show toys for a [5](age) year old
+      - I want toys for my [3](age) year old child
+      - suggest toys under [500](budget)
+      - show me toys below [1000](budget)
+      - I need [educational](category) toys
+      - suggest [soft toys](category)
+      - show [soft toys](category)
+      - I want [puzzles](category) for age [6](age)
+      - show [puzzles](category)
+      - show [board games](category)
+      - show [dolls](category)
+      - show [toy cars](category) under [700](budget)
+      - show [remote control cars](category) under [1000](budget)
+      - show [rc cars](category)
+      - recommend [building blocks](category) for [4](age) years
+      - toys for [2](age) year old under [400](budget)
+      - best toys for kids age [8](age)
+      - gifts for a [7](age) year old
+      - I need birthday gift toys
+      - show toys in my budget
+      - what toy should I buy
+
+  - intent: inform
+    examples: |
+      - age is [5](age)
+      - my budget is [500](budget)
+      - under [1000](budget)
+      - below [300](budget)
+      - [educational](category)
+      - [puzzles](category)
+      - [soft toys](category)
+      - [board games](category)
+      - [toy cars](category)
+      - for [6](age) years
+      - [4](age) year old
+
+  - intent: ask_categories
+    examples: |
+      - what categories do you have
+      - show toy categories
+      - types of toys
+      - what toys are available
+      - do you sell puzzles
+      - what else do you have
+      - show me categories
+      - what kind of toys are there
+      - list toy types
+      - all categories
+
+  - intent: ask_delivery
+    examples: |
+      - delivery details
+      - how many days for delivery
+      - do you deliver
+      - shipping information
+      - can you deliver to my home
+
+  - intent: ask_return_policy
+    examples: |
+      - return policy
+      - can I return a toy
+      - exchange policy
+      - what if toy is damaged
+      - refund details
+
+  - intent: ask_contact
+    examples: |
+      - contact number
+      - phone number
+      - how can I contact you
+      - customer care
+      - store contact
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot
+      - are you human
+      - who are you
+      - what can you do
+
+  - synonym: educational
+    examples: |
+      - learning
+      - study
+      - education
+      - educational toys
+
+  - synonym: puzzles
+    examples: |
+      - puzzle
+      - puzzle set
+
+  - synonym: soft toys
+    examples: |
+      - teddy
+      - teddy bear
+      - plush
+      - plush toys
+
+  - lookup: category
+    examples: |
+      - soft toys
+      - puzzles
+      - building blocks
+      - toy cars
+      - remote control cars
+      - rc cars
+      - dolls
+      - board games
+      - educational

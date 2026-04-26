@@ -1,0 +1,8 @@
+.venv/
+.rasa/
+__pycache__/
+*.py[cod]
+*.log
+
+# Keep source training files in Git; generated model archives can be rebuilt with `rasa train`.
+models/*.tar.gz

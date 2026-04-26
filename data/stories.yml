@@ -1,0 +1,24 @@
+version: "3.1"
+
+stories:
+  - story: toy recommendation conversation
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: recommend_toy
+        entities:
+          - age: 5
+          - budget: 500
+      - slot_was_set:
+          - age: 5
+          - budget: 500
+      - action: action_recommend_toys
+
+  - story: customer asks policy after recommendation
+    steps:
+      - intent: recommend_toy
+      - action: action_recommend_toys
+      - intent: ask_delivery
+      - action: utter_delivery
+      - intent: ask_return_policy
+      - action: utter_return_policy

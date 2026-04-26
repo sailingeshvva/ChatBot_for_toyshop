@@ -1,0 +1,59 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - recommend_toy
+  - inform
+  - ask_categories
+  - ask_delivery
+  - ask_return_policy
+  - ask_contact
+  - bot_challenge
+
+entities:
+  - age
+  - budget
+  - category
+
+slots:
+  age:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: age
+  budget:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: budget
+  category:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: category
+
+responses:
+  utter_greet:
+    - text: "Hi! Welcome to Toy Shop Phinite Box. I can help you find toys by age, budget, or category."
+  utter_goodbye:
+    - text: "Thanks for visiting Toy Shop Phinite Box."
+  utter_categories:
+    - text: "Toy Shop Phinite Box has soft toys, puzzles, building blocks, remote control cars, dolls, board games, and educational toys."
+  utter_delivery:
+    - text: "We deliver within 3-5 working days. Same-city delivery may be faster depending on stock."
+  utter_return_policy:
+    - text: "Returns are accepted within 7 days for unused toys in original packaging."
+  utter_contact:
+    - text: "You can contact Toy Shop Phinite Box at +91 98765 43210 or support@phinitebox.example."
+  utter_iamabot:
+    - text: "I am the Toy Shop Phinite Box assistant. I can help with toy suggestions, delivery, returns, categories, and contact details."
+  utter_default:
+    - text: "Sorry, I did not understand that. You can ask for toy suggestions, delivery, returns, categories, or contact details."
+
+actions:
+  - action_recommend_toys
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

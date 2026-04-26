@@ -1,0 +1,47 @@
+version: "3.1"
+
+rules:
+  - rule: Say hello
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Recommend toys
+    steps:
+      - intent: recommend_toy
+      - action: action_recommend_toys
+
+  - rule: Continue recommendation after details
+    steps:
+      - intent: inform
+      - action: action_recommend_toys
+
+  - rule: Show categories
+    steps:
+      - intent: ask_categories
+      - action: utter_categories
+
+  - rule: Explain delivery
+    steps:
+      - intent: ask_delivery
+      - action: utter_delivery
+
+  - rule: Explain returns
+    steps:
+      - intent: ask_return_policy
+      - action: utter_return_policy
+
+  - rule: Share contact
+    steps:
+      - intent: ask_contact
+      - action: utter_contact
+
+  - rule: Bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot

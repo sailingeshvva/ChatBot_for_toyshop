@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Rainbow Building Blocks",
+    "category": "building blocks",
+    "min_age": 3,
+    "max_age": 7,
+    "price": 499,
+    "stock": 18,
+    "description": "Colorful blocks for creativity, counting, and motor skills."
+  },
+  {
+    "name": "Animal Puzzle Set",
+    "category": "puzzles",
+    "min_age": 4,
+    "max_age": 8,
+    "price": 349,
+    "stock": 12,
+    "description": "Beginner-friendly animal puzzles for visual thinking."
+  },
+  {
+    "name": "Soft Teddy Bear",
+    "category": "soft toys",
+    "min_age": 2,
+    "max_age": 10,
+    "price": 599,
+    "stock": 25,
+    "description": "Soft plush teddy, suitable for gifting."
+  },
+  {
+    "name": "STEM Learning Kit",
+    "category": "educational",
+    "min_age": 6,
+    "max_age": 12,
+    "price": 999,
+    "stock": 9,
+    "description": "Activity kit for basic science and problem solving."
+  },
+  {
+    "name": "Mini Toy Car Pack",
+    "category": "toy cars",
+    "min_age": 3,
+    "max_age": 9,
+    "price": 299,
+    "stock": 30,
+    "description": "Pack of small toy cars for pretend play."
+  },
+  {
+    "name": "Turbo RC Racing Car",
+    "category": "remote control cars",
+    "min_age": 6,
+    "max_age": 14,
+    "price": 899,
+    "stock": 10,
+    "description": "Fast rechargeable remote control car for racing play."
+  },
+  {
+    "name": "Family Board Game",
+    "category": "board games",
+    "min_age": 7,
+    "max_age": 14,
+    "price": 799,
+    "stock": 7,
+    "description": "Simple strategy board game for family play."
+  },
+  {
+    "name": "Classic Doll Set",
+    "category": "dolls",
+    "min_age": 3,
+    "max_age": 9,
+    "price": 699,
+    "stock": 14,
+    "description": "Doll set with accessories for role play."
+  }
+]

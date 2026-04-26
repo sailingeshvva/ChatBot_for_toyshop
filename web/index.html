@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toy Shop Phinite Box</title>
+    <link rel="stylesheet" href="styles.css?v=4" />
+  </head>
+  <body>
+    <main class="shop-shell">
+      <section class="shop-panel">
+        <img class="brand-logo hero-logo" src="assets/phinite-box-logo.png" alt="Phinite Box logo" />
+        <p class="eyebrow">Toy Shop Phinite Box</p>
+        <h1>Find the right toy faster</h1>
+        <p class="intro">
+          Ask for toys by age, price, or category. Try “toys for 5 year old under 500”.
+        </p>
+        <div class="quick-actions" aria-label="Quick questions">
+          <button type="button" data-message="Suggest toys for age 5 under 500">Age 5 under 500</button>
+          <button type="button" data-message="Show educational toys">Educational toys</button>
+          <button type="button" data-message="Show remote control cars">RC cars</button>
+          <button type="button" data-message="Delivery details">Delivery</button>
+          <button type="button" data-message="Return policy">Returns</button>
+        </div>
+      </section>
+
+      <section class="chat-panel" aria-label="Toy chatbot">
+        <div class="chat-header">
+          <img class="brand-logo chat-logo" src="assets/phinite-box-logo.png" alt="Phinite Box logo" />
+          <div class="chat-title">
+            <p>Toy Assistant</p>
+            <span>Toy Shop Phinite Box</span>
+          </div>
+          <span class="status">Online</span>
+        </div>
+        <div id="chatMessages" class="chat-messages">
+          <div class="message bot">Hi! Welcome to Toy Shop Phinite Box. What toy are you looking for?</div>
+          <div class="follow-ups" aria-label="Suggested replies">
+            <button type="button" data-message="Show remote control cars">RC cars</button>
+            <button type="button" data-message="Show educational toys">Educational toys</button>
+            <button type="button" data-message="Suggest toys for age 5 under 500">Age 5 under 500</button>
+            <button type="button" data-message="What categories do you have">Categories</button>
+          </div>
+        </div>
+        <form id="chatForm" class="chat-form">
+          <input
+            id="messageInput"
+            type="text"
+            autocomplete="off"
+            placeholder="Type your question..."
+            aria-label="Message"
+          />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js?v=4"></script>
+  </body>
+</html>
