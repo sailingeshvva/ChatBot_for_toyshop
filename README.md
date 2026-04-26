@@ -93,6 +93,16 @@ Open:
 http://localhost:8000
 ```
 
+## GitHub Pages
+
+The static website is in `web/`. A root `index.html` redirects GitHub Pages visitors to `web/` so the site can open at:
+
+```text
+https://sailingeshvva.github.io/ChatBot_for_toyshop/
+```
+
+GitHub Pages can host the website UI only. The Python/Rasa chatbot server still needs to run separately, because GitHub Pages cannot run Python backends.
+
 ## Example Questions
 
 - `Show remote control cars`
