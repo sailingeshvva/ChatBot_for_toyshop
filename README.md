@@ -1,37 +1,52 @@
 # Toy Shop Phinite Box Chatbot
 
-A starter chatbot for Toy Shop Phinite Box. It can answer common shop questions and recommend toys by age, budget, and category.
+A website chatbot for **Toy Shop Phinite Box**. The bot helps customers find toys by age, budget, and category, and answers common shop questions like delivery, returns, contact details, and available toy types.
+
+## Features
+
+- Toy recommendations by age, budget, and category
+- Product data stored in `data/products/toys.json`
+- Follow-up buttons so customers can reply without typing
+- Support for categories like RC cars, educational toys, soft toys, puzzles, dolls, board games, building blocks, and toy cars
+- Delivery, return policy, and contact replies
+- Branded UI theme using navy, burgundy, and gold colors
+- Transparent PNG logo used in the landing panel and chat header
 
 ## Tech Stack
 
-- Rasa Open Source for NLU and dialogue
+- Rasa Open Source for chatbot NLU and dialogue
 - Rasa SDK for custom Python actions
-- JSON for toy product data
+- JSON for product data
 - HTML, CSS, and JavaScript for the website chat UI
-- Transparent PNG logo asset in `web/assets/phinite-box-logo.png`
+- Python 3.10 virtual environment
 
 ## Project Structure
 
 ```text
 .
-├── actions/actions.py
-├── data/nlu.yml
-├── data/rules.yml
-├── data/stories.yml
-├── data/products/toys.json
+├── actions/
+│   └── actions.py
+├── data/
+│   ├── nlu.yml
+│   ├── rules.yml
+│   ├── stories.yml
+│   └── products/toys.json
+├── web/
+│   ├── assets/phinite-box-logo.png
+│   ├── index.html
+│   ├── script.js
+│   └── styles.css
 ├── config.yml
 ├── credentials.yml
 ├── domain.yml
 ├── endpoints.yml
 ├── requirements.txt
-└── web/
+└── README.md
 ```
 
 ## Setup
 
-Rasa Open Source 3.6 needs Python 3.8, 3.9, or 3.10. This project is set to Python 3.10 in `.python-version`.
-
-Your current machine has Python 3.11.9, so install Python 3.10 first if `pip install -r requirements.txt` rejects Rasa.
+Rasa Open Source 3.6 works with Python 3.8, 3.9, or 3.10. This project is configured for Python 3.10.
 
 ```powershell
 py -3.10 -m venv .venv
@@ -40,17 +55,16 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-If the `py -3.10` command is not available, install Python 3.10 from python.org, then run the setup commands again.
-
-## Train The Bot
+## Train
 
 ```powershell
+.\.venv\Scripts\activate
 rasa train
 ```
 
-## Run The Bot
+## Run
 
-Open three terminals in this project folder.
+Open three terminals in the project folder.
 
 Terminal 1:
 
@@ -69,10 +83,11 @@ rasa run --enable-api --cors "*"
 Terminal 3:
 
 ```powershell
-python -m http.server 8000 -d web
+.\.venv\Scripts\activate
+python -m http.server 8000 --bind 127.0.0.1 --directory web
 ```
 
-Then open:
+Open:
 
 ```text
 http://localhost:8000
@@ -80,9 +95,15 @@ http://localhost:8000
 
 ## Example Questions
 
+- `Show remote control cars`
 - `Suggest toys for age 5 under 500`
 - `Show educational toys`
-- `I want puzzles for age 6`
+- `What categories do you have`
 - `Delivery details`
 - `Return policy`
 - `Contact number`
+
+## Notes
+
+- Generated Rasa model archives are ignored by Git and can be rebuilt with `rasa train`.
+- Runtime logs, `.rasa/`, `.venv/`, and Python cache files are ignored.
